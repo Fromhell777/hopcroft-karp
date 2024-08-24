@@ -1,0 +1,99 @@
+Cocktails
+
+Opgave
+
+Achter de bar van ’Los Amigos’ staan een aantal barmannen. Elke barman kent het
+recept van enkele soorten cocktails. Elke barman kan elke soort cocktail waarvan
+hij het recept kent klaarmaken in exact 5 minuten, onafhankelijk van wat de
+andere barmannen op dat moment doen. Wanneer een barman het recept van een
+cocktail niet kent dan kan hij die cocktail niet bereiden.
+
+Het is kalm aan de bar en alle barmannen zijn beschikbaar. Een klant doet een
+bestelling van een aantal cocktails. Kan deze klant bediend worden in exact 5
+minuten?
+
+Stel bv. dat er vier soorten cocktails zijn (A t.e.m. D) en dat er twee
+barmannen zijn waarbij de eerste het recept van cocktailsoorten A en B kent, en
+de tweede van cocktailsoorten C en D. Dit betekent dat cocktails van type A en B
+nooit tegelijkertijd kunnen bereid worden (want er is slechts ´e´en barman die
+het recept voor deze cocktails kent). Hetzelfde geldt voor cocktails van type C
+en D. Het is echter perfect mogelijk om een cocktail van type A en een cocktail
+van type C tegelijkertijd te bereiden: de cocktail van type A wordt bereid door
+de eerste barman terwijl de cocktail van type C bereid wordt door de tweede
+barman. Wanneer de klant ´e´en cocktail van type A en ´e´en cocktail van type C
+bestelt, dan kan die in exact 5 minuten bediend worden.
+
+Deze opgave bestaat erin om voor een bepaalde bestelling na te gaan of deze
+bereid kan worden in exact 5 minuten.
+
+Invoer
+
+De eerste regel van het bestand bevat het aantal opgaven n (1 ≤ n ≤ 100).  Elke
+opgave bestaat uit 1 + m + 1 + k regels. De eerste regel van elke opgave bevat
+het aantal barmannen m (1 ≤ m ≤ 100). Dan volgen m regels, waarbij elk van deze
+m regels een barman beschrijft door aan te geven van welk type cocktails deze
+barman de recepten kent. Dit gebeurt door in alfabetische volgorde en zonder
+spaties de cocktailtypes op te sommen. (Er zijn hoogstens 26 cocktailtypes met
+namen A t.e.m. Z).
+
+Dan volgt een regel met hierop een geheel getal k (1 ≤ k ≤ 100). Dit getal geeft
+aan hoeveel verschillende bestellingen er moeten gecontroleerd worden voor de
+gegeven barmannenconfiguratie. Elke combinatie bestaat uit een opeenvolging van
+de letters A t.e.m. Z opnieuw in alfabetische volgorde en zonder spaties. Merk
+op dat hier eenzelfde letter meerdere malen kan voorkomen wat betekent dat dit
+type van cocktail verschillende keren besteld werd.
+
+Het voorbeeld gegeven in de inleiding (met twee barmannen) wordt dus als volgt
+beschreven; er wordt gevraagd om vier verschillende combinaties te beoordelen.
+2
+AB
+CD
+4
+AA
+AC
+CB
+CD
+
+Uitvoer
+
+Voor elke opgave bestaat de uitvoer uit k regels. Op elke regel staat eerst de
+bestelling die getest werd gevolgd door het woord mogelijk of onmogelijk
+naargelang de gevraagde bestelling wel of niet in exact 5 minuten kan bereid
+worden. Beide gegevens worden van elkaar gescheiden door een spatie.
+
+Let op! Zorg ervoor dat je uitvoer geen overbodige tekens bevat, bijvoorbeeld
+een spatie op het einde van een regel of een lege regel op het einde van de
+uitvoer. Dat zorgt er immers voor dat je uitvoer als foutief wordt beschouwd.
+
+Voorbeeld
+
+Invoer
+
+2
+2
+AB
+CD
+2
+AC
+AB
+3
+ABC
+AB
+A
+5
+AAA
+2
+ABB
+ABC
+BBB
+BCC
+
+Uitvoer
+
+AC mogelijk
+AB onmogelijk
+AAA mogelijk
+ABB mogelijk
+ABC mogelijk
+BBB onmogelijk
+BCC onmogelijk
